@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.5.1/spectre.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.5.1/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.5.1/spectre-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>ez Git-ing</title>
+</head>
+<body>
+    <div class="eg-header-container">
+        <div class="eg-split eg-split-top">
+            <h1>Learn Git in code base</h1>
+            <button class="btn btn-primary">Read more</button>
+        </div>
+        <div class="eg-split eg-split-bot">
+            <h1>Learn Git in video base</h1>
+            <button class="btn btn-primary">Read more</button>
+        </div>
+    </div>
+
+    <div class="container grid-lg">
+        <div class="columns">
+            <div class="column col-12 text-center">
+                <div class="eg-title-wrapper">
+                    <h2>What is Git?</h2>
+                </div>
+            </div>
+
+            <div class="column col-12 text-center">
+                <h4>Git is a version control system for tracking changes in computer files and coordinating work on those files among multiple people. <a href="https://en.wikipedia.org/wiki/Git" target=_blank>--Wikipedia</h4></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container grid-lg">
+        <div class="columns grid">
+            <div class="column col-6 col-sm-12 col-xs-12 text-center grid-item">
+                <div class="eg-content-wrapper">
+                    <div class="eg-code-title">
+                        <h4>Installation</h4>
+                        <hr>
+                    </div>
+
+                    <div class="eg-code-desc">
+                        <p class="eg-text-bold">For Linux user</p>
+                        <code>sudo apt-get install git-all</code>
+
+                        <p class="eg-text-mt">For Mac and Window user</p>
+                        <p>Can directly download from <a href="https://git-scm.com/download">here</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column col-6 col-sm-12 col-xs-12 text-center grid-item">
+                <div class="eg-content-wrapper">
+                    <div class="eg-code-title">
+                        <h4>Configure Git</h4>
+                        <hr>
+                    </div>
+
+                    <div class="eg-code-desc">
+                        <p class="eg-text-bold">Set the git username and email (globally)</p>
+                        <code>git config -g user.name "username"</code><br>
+                        <code>git config -g user.email user@gmail.com</code>
+
+                        <p class="eg-text-mt">if dont want to set globally just remove the -g in the command</p>
+
+                        <p class="eg-text-mt">
+                            Check your git username and email
+                        </p>
+                        <code>git config -l</code>
+                    </div>
+                </div>
+            </div>  
+            
+            <div class="column col-6 col-sm-12 col-xs-12 text-center grid-item">
+                <div class="eg-content-wrapper">
+                    <div class="eg-code-title">
+                        <h4>Basic Git commands</h4>
+                        <hr>
+                    </div>
+
+                    <div class="eg-code-desc">
+                        <p class="eg-text-bold">Initiate an empty git repository</p>
+                        <code>git init</code>
+
+                        <p class="eg-text-mt">
+                            Check the working tree status
+                        </p>
+                        <code>git status</code>
+
+                        <p class="eg-text-mt">
+                            Check branch
+                        </p>
+                        <code>git branch</code>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.1/masonry.pkgd.min.js"></script>
+    <script>
+        var msnry = new Masonry('.grid', {
+            itemSelector: '.grid-item'
+        });
+    </script>
+    <!-- <script src="app.js"></script> -->
+</body>
+</html>
