@@ -64,14 +64,16 @@
 
                     <div class="eg-code-desc">
                         <p class="eg-text-bold">Set the git username and email (globally)</p>
-                        <code>git config -g user.name "username"</code><br>
+                        <code>git config -g user.name username</code><br>
                         <code>git config -g user.email user@gmail.com</code>
 
-                        <p class="eg-text-mt">if dont want to set globally just remove the -g in the command</p>
+                        <p class="eg-text-mt">If dont want to set globally just remove the -g in the command</p>
 
                         <p class="eg-text-mt">
                             Check your git username and email
                         </p>
+                        <code>git config user.name</code><br>
+                        <code>git config user.email</code><br>
                         <code>git config -l</code>
                     </div>
                 </div>
@@ -80,7 +82,7 @@
             <div class="column col-6 col-sm-12 col-xs-12 text-center grid-item">
                 <div class="eg-content-wrapper">
                     <div class="eg-code-title">
-                        <h4>Basic Git commands</h4>
+                        <h4>Create a repository</h4>
                         <hr>
                     </div>
 
@@ -89,18 +91,67 @@
                         <code>git init</code>
 
                         <p class="eg-text-mt">
-                            Check the working tree status
+                            Add all the modified file into staging area
                         </p>
-                        <code>git status</code>
+                        <code>git add .</code>
 
                         <p class="eg-text-mt">
-                            Check branch
+                            Add only specific file into staging area
                         </p>
-                        <code>git branch</code>
+                        <code>git add filename</code>
+
+                        <p class="eg-text-mt">
+                            Add all the html file
+                        </p>
+                        <code>git add *.html</code>
                         
+                        <p class="eg-text-mt">
+                            Add the whole directory into staging area
+                        </p>
+                        <code>git add foldername</code>
+
+                        <p class="eg-text-mt">
+                            Add the specific file within a directory
+                        </p>
+                        <code>git add foldername/filename</code>
+                        
+                        <p class="eg-text-mt">
+                            Remove a file from staging area
+                        </p>
+                        <code>git rm --cached filename</code> 
+                        
+                        <p class="eg-text-mt">
+                            Remove directory from staging area
+                        </p>
+                        <code>git rm --cached -r foldername</code>                         
                     </div>
                 </div>
             </div>
+
+            <div class="column col-6 col-sm-12 col-xs-12 text-center grid-item">
+                <div class="eg-content-wrapper">
+                    <div class="eg-code-title">
+                        <h4>Make commit</h4>
+                        <hr>
+                    </div>
+
+                    <div class="eg-code-desc">
+                        <p class="eg-text-bold">Commit the changes</p>
+                        <code>git commit -m "commit messages"</code>
+
+                        <p class="eg-text-mt">
+                            Show the commit history
+                        </p>
+                        <code>git log</code><br>
+                        <code>git log --oneline</code>
+
+                        <p class="eg-text-mt">
+                            Show what does a commit change
+                        </p>
+                        <code>git show commitnumber</code>                        
+                    </div>
+                </div>
+            </div>             
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.1/masonry.pkgd.min.js"></script>
