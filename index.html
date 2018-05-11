@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="style.css">
     <title>ez Git-ing</title>
 </head>
+
 <body>
     <div class="eg-header-container">
         <div class="eg-split eg-split-top">
@@ -31,7 +33,10 @@
             </div>
 
             <div class="column col-12 text-center">
-                <h4>Git is a version control system for tracking changes in computer files and coordinating work on those files among multiple people. <a href="https://en.wikipedia.org/wiki/Git" target=_blank>--Wikipedia</h4></a>
+                <h4>Git is a version control system for tracking changes in computer files and coordinating work on those files
+                    among multiple people.
+                    <a href="https://en.wikipedia.org/wiki/Git" target=_blank>--Wikipedia</h4>
+                </a>
             </div>
         </div>
     </div>
@@ -50,7 +55,9 @@
                         <code>sudo apt-get install git-all</code>
 
                         <p class="eg-text-mt">For Mac and Window user</p>
-                        <p>Can directly download from <a href="https://git-scm.com/download">here</a></p>
+                        <p>Can directly download from
+                            <a href="https://git-scm.com/download">here</a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -64,7 +71,8 @@
 
                     <div class="eg-code-desc">
                         <p class="eg-text-bold">Set the git username and email (globally)</p>
-                        <code>git config -g user.name username</code><br>
+                        <code>git config -g user.name username</code>
+                        <br>
                         <code>git config -g user.email user@gmail.com</code>
 
                         <p class="eg-text-mt">If dont want to set globally just remove the -g in the command</p>
@@ -72,13 +80,15 @@
                         <p class="eg-text-mt">
                             Check your git username and email
                         </p>
-                        <code>git config user.name</code><br>
-                        <code>git config user.email</code><br>
+                        <code>git config user.name</code>
+                        <br>
+                        <code>git config user.email</code>
+                        <br>
                         <code>git config -l</code>
                     </div>
                 </div>
-            </div>  
-            
+            </div>
+
             <div class="column col-6 col-sm-12 col-xs-12 text-center grid-item">
                 <div class="eg-content-wrapper">
                     <div class="eg-code-title">
@@ -104,7 +114,7 @@
                             Add all the html file
                         </p>
                         <code>git add *.html</code>
-                        
+
                         <p class="eg-text-mt">
                             Add the whole directory into staging area
                         </p>
@@ -114,16 +124,16 @@
                             Add the specific file within a directory
                         </p>
                         <code>git add foldername/filename</code>
-                        
+
                         <p class="eg-text-mt">
                             Remove a file from staging area
                         </p>
-                        <code>git rm --cached filename</code> 
-                        
+                        <code>git rm --cached filename</code>
+
                         <p class="eg-text-mt">
                             Remove directory from staging area
                         </p>
-                        <code>git rm --cached -r foldername</code>                         
+                        <code>git rm --cached -r foldername</code>
                     </div>
                 </div>
             </div>
@@ -142,16 +152,80 @@
                         <p class="eg-text-mt">
                             Show the commit history
                         </p>
-                        <code>git log</code><br>
+                        <code>git log</code>
+                        <br>
                         <code>git log --oneline</code>
 
                         <p class="eg-text-mt">
                             Show what does a commit change
                         </p>
-                        <code>git show commitnumber</code>                        
+                        <code>git show commitnumber</code>
                     </div>
                 </div>
-            </div>             
+            </div>
+
+            <div class="column col-6 col-sm-12 col-xs-12 text-center grid-item">
+                <div class="eg-content-wrapper">
+                    <div class="eg-code-title">
+                        <h4>Undoing things</h4>
+                        <hr>
+                    </div>
+
+                    <div class="eg-code-desc">
+                        <p class="eg-text-bold">checkout, revert, reset are use to undoing change in git. However, they play different role depand
+                            on the conditions.</p>
+
+                        <p class="eg-text-mt">
+                            Check back the existing commit (git will automatic create an another branch for you to review the previous commit)
+                        </p>
+                        <code>git checkout commitnumber</code>
+
+                        <p class="eg-text-mt">
+                            Revert back to any previous commit
+                        </p>
+                        <code>git revert commitnumber</code>
+
+                        <p class="eg-text-mt">
+                            Reset the commit (danger). After reset, the changes will still stay in staging area. If want to hard reset, add <code>--hard</code> in the code below
+                        </p>
+                        <code>git reset commitnumber</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column col-6 col-sm-12 col-xs-12 text-center grid-item">
+                <div class="eg-content-wrapper">
+                    <div class="eg-code-title">
+                        <h4>Branching</h4>
+                        <hr>
+                    </div>
+
+                    <div class="eg-code-desc">
+                        <p class="eg-text-bold">Create a new branch</p>
+                        <code>git branch branchname</code>
+
+                        <p class="eg-text-mt">
+                            Show branch
+                        </p>
+                        <code>git branch -a</code>
+
+                        <p class="eg-text-mt">
+                            Switch to another branch
+                        </p>
+                        <code>git checkout branchname</code>
+
+                        <p class="eg-text-mt">
+                            Create a new branch and switch to it 
+                        </p>
+                        <code>git checkout -b branchname</code>
+
+                        <p class="eg-text-mt">
+                            Merge branch (Merge branch to you current stay branch)
+                        </p>
+                        <code>git merge branchname</code>
+                    </div>
+                </div>
+            </div>            
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.1/masonry.pkgd.min.js"></script>
@@ -162,4 +236,5 @@
     </script>
     <!-- <script src="app.js"></script> -->
 </body>
+
 </html>
