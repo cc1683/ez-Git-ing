@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.5.1/spectre.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.5.1/spectre-exp.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.5.1/spectre-icons.min.css">
@@ -16,13 +17,27 @@
     <div class="eg-header-container">
         <div class="eg-split eg-split-top">
             <h1>Learn Git in code base</h1>
-            <button class="btn btn-primary">Read more</button>
+            <button class="btn btn-primary" id="eg-scroll-code">Read more</button>
         </div>
         <div class="eg-split eg-split-bot">
             <h1>Learn Git in video base</h1>
-            <button class="btn btn-primary">Read more</button>
+            <button class="btn btn-primary" id="eg-scroll-video">Read more</button>
         </div>
     </div>
+
+    <script>
+        $('#eg-scroll-code').click(() => {
+            $('html, body').animate({
+                scrollTop: $('#eg-code').offset().top
+            }, 750);
+        });
+
+        $('#eg-scroll-video').click(() => {
+            $('html, body').animate({
+                scrollTop: $('#eg-video').offset().top
+            }, 750);
+        });        
+    </script>
 
     <div class="container grid-lg">
         <div class="columns">
@@ -35,13 +50,12 @@
             <div class="column col-12 text-center">
                 <h4>Git is a version control system for tracking changes in computer files and coordinating work on those files
                     among multiple people.
-                    <a href="https://en.wikipedia.org/wiki/Git" target=_blank>--Wikipedia</h4>
-                </a>
+                    <a href="https://en.wikipedia.org/wiki/Git" target=_blank>--Wikipedia</h4></a>
             </div>
         </div>
     </div>
 
-    <div class="container grid-lg">
+    <div class="container grid-xl" id="eg-code">
         <div class="columns grid">
             <div class="column col-6 col-sm-12 col-xs-12 text-center grid-item">
                 <div class="eg-content-wrapper">
@@ -228,13 +242,78 @@
             </div>            
         </div>
     </div>
+
+    <div class="container grid-lg">
+        <div class="columns">
+            <div class="column col-12 text-center">
+                <h2>Learn in video base</h2>
+                <p class="eg-text-mt">
+                    These are several videos in this section which will conclude all the code above and show some introduction to GitHub.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container grid-lg" id="eg-video">
+        <div class="columns">
+            <div class="column col-6 col-sm-12 col-xs-12 text-center">
+                <div class="eg-video-wrapper text-center">
+                    <video class="video-responsive" src="video/ez-video-1.mp4" controls></video>
+                    <div class="eg-text-mt">
+                        <h4>Git init and config</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="column col-6 col-sm-12 col-xs-12 text-center">
+                <div class="eg-video-wrapper">
+                    <video class="video-responsive" src="video/eg-video-2.mp4" controls></video>
+                    <div class="eg-text-mt">
+                        <h4>Git commit</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="column col-6 col-sm-12 col-xs-12 text-center">
+                <div class="eg-video-wrapper">
+                    <video class="video-responsive" src="video/eg-video-3.mp4" controls></video>
+                    <div class="eg-text-mt">
+                        <h4>Branching</h4>
+                    </div>
+                </div>
+            </div> 
+            
+            <div class="column col-6 col-sm-12 col-xs-12 text-center">
+                <div class="eg-video-wrapper">
+                    <video class="video-responsive" src="video/eg-video-4.mp4" controls></video>
+                    <div class="eg-text-mt">
+                        <h4>GitHub</h4>
+                    </div>
+                </div>
+            </div>             
+        </div>
+    </div>
+
+    <footer>
+        <div class="container grid-xl">
+            <div class="columns">
+                <div class="column col-12 text-center">
+                    <h5>Developed by <a href="https://luisyc.com/" target="_blank">luisyc</a></h5>
+                </div>
+
+                <div class="column col-12 text-center">
+                    <h5>My <a href="https://github.com/cc1683" target="_blank">GitHub</a></h5>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.1/masonry.pkgd.min.js"></script>
     <script>
         var msnry = new Masonry('.grid', {
             itemSelector: '.grid-item'
         });
     </script>
-    <!-- <script src="app.js"></script> -->
+    <script src="app.js"></script>
 </body>
 
 </html>

@@ -110,6 +110,13 @@ button.btn {
 .grid-item {
     margin-bottom: 1rem;
 }
+.eg-video-wrapper {
+    margin-top: 1.25rem;
+    justify-content: center;
+}
+footer {
+    background: #efefef;
+}
 
 /* Media Query */
 @media (max-width: 881px) {
